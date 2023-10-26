@@ -1,5 +1,5 @@
-const getMovies = async () => {
-    const url = "www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita"
+const getCocktails = async () => {
+    const url = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita";
 
 
     try{
@@ -12,26 +12,26 @@ const getMovies = async () => {
 };
 
 
-const showMovies =async()=> {
-    let movies = await getMovies();
+const showCocktails =async()=> {
+    let cocktails = await getCocktails();
 
-    let moviesSection = document.getElementById("movies-section");
+    let cocktailsSection = document.getElementById("cocktails-section");
     
-    movies.forEach(movie => {
-        //movie is 1 movie
-        moviesSection.append(getMovieItem(movie));
+    cocktails.drinks.forEach(cocktail => {
+        //cocktail is 1 cocktail
+        cocktailsSection.append(getCocktailItem(cocktail));
     });
 };
 
-const getMovieItem= (movie)=>{
+const getCocktailItem= (cocktail)=>{
     let section = document.createElement("section");
    // let section2 = document.createElement("section");
     let section3 = document.createElement("section");
     let h3 = document.createElement("h3");
-    h3.innerText = movie.title;
+    h3.innerText = cocktail.idDrink;
     
     
-    section.append(section2);
+   // section.append(section2);
     section.append(section3);
     
     section.classList.add("section");
@@ -44,23 +44,21 @@ const getMovieItem= (movie)=>{
     section3.append(h3);
     let ul = document.createElement("ul");
     section3.append(ul);
-    ul.append(getLi(movie.director));
-    ul.append(getLi(`Notable cast: ${movie.actors}`));
-    ul.append(getLi(`Year made: ${movie.year}`));
-    ul.append(getLi(`Genres: ${movie.genres}`));
-    ul.append(getLi(`Description: ${movie.description}`));
-    
-/*
-   let img = document.createElement("img");
-   img.src = "https://portiaportia.github.io/json/" + movie.img;
-   img.classList.add("img-sizer");
-   section2.append(img);
-*/
+    ul.append(getLi(cocktail.strDrink));
+    ul.append(getLi(`Notable cast: ${cocktail.strDrinkAlternate}`));
+    ul.append(getLi(`Year made: ${cocktail.strTags}`));
+    ul.append(getLi(`Genres: ${cocktail.strVideo}`));
+    ul.append(getLi(`Description: ${cocktail.strCategory}`));
+    ul.append(getLi(`Description: ${cocktail.strIBA}`));
+    ul.append(getLi(`Description: ${cocktail.strAlcoholic}`));
+    ul.append(getLi(`Description: ${cocktail.strGlass}`));
+
+
     
 
 
 
-   // section.append(movie.img);
+   // section.append(cocktail.img);
     
     
     
@@ -80,4 +78,4 @@ const getLi = data => {
 
  
 
-window.onload =() => showMovies();
+window.onload =() => showCocktails();
