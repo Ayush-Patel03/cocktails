@@ -28,7 +28,7 @@ const getCocktailItem= (cocktail)=>{
    // let section2 = document.createElement("section");
     let section3 = document.createElement("section");
     let h3 = document.createElement("h3");
-    h3.innerText = cocktail.idDrink;
+    h3.innerText = cocktail.strDrink;
     
     
    // section.append(section2);
@@ -44,14 +44,31 @@ const getCocktailItem= (cocktail)=>{
     section3.append(h3);
     let ul = document.createElement("ul");
     section3.append(ul);
-    ul.append(getLi(cocktail.strDrink));
-    ul.append(getLi(`Notable cast: ${cocktail.strDrinkAlternate}`));
-    ul.append(getLi(`Year made: ${cocktail.strTags}`));
-    ul.append(getLi(`Genres: ${cocktail.strVideo}`));
-    ul.append(getLi(`Description: ${cocktail.strCategory}`));
-    ul.append(getLi(`Description: ${cocktail.strIBA}`));
-    ul.append(getLi(`Description: ${cocktail.strAlcoholic}`));
-    ul.append(getLi(`Description: ${cocktail.strGlass}`));
+    ul.append(getLi(cocktail.idDrink));
+    ul.append(getLi(`Alternate: ${cocktail.strDrinkAlternate}`));
+    ul.append(getLi(`Tags: ${cocktail.strTags}`));
+    ul.append(getLi(`Video: ${cocktail.strVideo}`));
+    ul.append(getLi(`Category: ${cocktail.strCategory}`));
+    ul.append(getLi(`IBA: ${cocktail.strIBA}`));
+    ul.append(getLi(`Alcoholic?: ${cocktail.strAlcoholic}`));
+    ul.append(getLi(`Glass: ${cocktail.strGlass}`));
+    ul.append(getLi(`Instructions: ${cocktail.strInstructions}`));
+    ul.append(getLi(`Ingredient 1: ${cocktail.strIngredient1}`));
+    ul.append(getLi(`Ingredient 2: ${cocktail.strIngredient2}`));
+    ul.append(getLi(`Ingredient 3: ${cocktail.strIngredient3}`));
+    ul.append(getLi(`Ingredient 4: ${cocktail.strIngredient4}`));
+    ul.append(getLi(`Ingredient 5: ${cocktail.strIngredient5}`));
+    ul.append(getLi(`Ingredient 6: ${cocktail.strIngredient6}`));
+    ul.append(getLi(`Ingredient 7: ${cocktail.strIngredient7}`));
+    ul.append(getLi(`Ingredient 8: ${cocktail.strIngredient8}`));
+    ul.append(getLi(`Ingredient 9: ${cocktail.strIngredient9}`));
+    ul.append(getLi(`Ingredient 10: ${cocktail.strIngredient10}`));
+    ul.append(getLi(`Ingredient 11: ${cocktail.strIngredient11}`));
+    ul.append(getLi(`Ingredient 12: ${cocktail.strIngredient12}`));
+    ul.append(getLi(`Ingredient 13: ${cocktail.strIngredient13}`));
+    ul.append(getLi(`Ingredient 14: ${cocktail.strIngredient14}`));
+    ul.append(getLi(`Ingredient 15: ${cocktail.strIngredient15}`));
+    
 
 
     
