@@ -1,5 +1,5 @@
 const getMovies = async () => {
-    const url = "https://portiaportia.github.io/json/movies.json";
+    const url = "www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita"
 
 
     try{
@@ -25,7 +25,7 @@ const showMovies =async()=> {
 
 const getMovieItem= (movie)=>{
     let section = document.createElement("section");
-    let section2 = document.createElement("section");
+   // let section2 = document.createElement("section");
     let section3 = document.createElement("section");
     let h3 = document.createElement("h3");
     h3.innerText = movie.title;
@@ -35,7 +35,7 @@ const getMovieItem= (movie)=>{
     section.append(section3);
     
     section.classList.add("section");
-    section2.classList.add("img-flexing");
+  //  section2.classList.add("img-flexing");
     
     section3.classList.add("p-flex");
     
@@ -50,12 +50,12 @@ const getMovieItem= (movie)=>{
     ul.append(getLi(`Genres: ${movie.genres}`));
     ul.append(getLi(`Description: ${movie.description}`));
     
-
+/*
    let img = document.createElement("img");
    img.src = "https://portiaportia.github.io/json/" + movie.img;
    img.classList.add("img-sizer");
    section2.append(img);
-
+*/
     
 
 
