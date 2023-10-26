@@ -1,5 +1,5 @@
-const getCocktails = async () => {
-    const url = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=11007";
+const getMovies = async () => {
+    const url = "https://portiaportia.github.io/json/movies.json";
 
 
     try{
